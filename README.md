@@ -1,2 +1,2 @@
-awesomecms-template-apatolp
+awesomecms-template-anatolpa
 ===========================
