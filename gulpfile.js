@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     clean = require('gulp-clean'),
-    jade = require('gulp-clean'),
+    jade = require('gulp-jade'),
     minifiCss = require('gulp-minify-css'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
