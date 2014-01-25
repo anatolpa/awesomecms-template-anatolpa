@@ -1,0 +1,22 @@
+.b-header-wrap {
+  height: 74px;
+  width: 100%;
+  background: #000;
+  opacity: 0.33;
+}
+.b-header {
+  @extend .b-header;
+  width: 1010px;
+  margin: {
+    top: 0;
+    left: auto;
+    right: auto;
+    bottom: 40px;
+  }
+}
+.b-logo {
+  float: left;
+}
+.b-menu {
+  float: right;
+}
