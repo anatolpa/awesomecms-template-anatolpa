@@ -1,3 +1,4 @@
+include mixins
 doctype html
 html
     head
@@ -5,9 +6,32 @@ html
         meta(description='')
         meta(keywords='')
         title My Site
+        link(rel='stylesheet', type='text/css', href='../css/b-page/b-page.css')
+        link(rel='stylesheet', type='text/css', href='../css/b-header/b-header.css')
+        link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,700,700italic|Open+Sans+Condensed:300,700', rel="stylesheet", type='text/css')
     body
-        div.b-header
-            include ../components/b-header/b-header
-        div.b-content
-            div.b-posts
-        div.b-footer
+        div.b-page
+            div.b-header-wrap
+                div.b-header
+                    div.b-logo
+                        a(href='main.html'): img(src='../../components/b-header/images/logo2x.png')
+                    div.b-menu
+                        ul
+                            mixin menuLi({page: page, url:"#", text: "Contact"})
+                            mixin menuLi({page: page, url:"#", text: "Styles"})
+                            ul
+                                mixin menuLi({page: page, url:"#", text: "Typography"})
+                                mixin menuLi({page: page, url:"#", text: "Columns"})
+                            mixin menuLi({page: page, url:"#", text: "Pages"})
+                            ul
+                                mixin menuLi({page: page, url:"#", text: "Page With Sidebar"})
+                                mixin menuLi({page: page, url:"#", text: "Full Width"})
+                            mixin menuLi({page: page, url:"#", text: "Blog"})
+                            ul
+                                mixin menuLi({page: page, url:"#", text: "Blog Post"})
+            div.b-content
+                div.b-sidebar
+                div.b-posts
+                div.push
+            div.b-footer-wrap
+                div.b-footer
