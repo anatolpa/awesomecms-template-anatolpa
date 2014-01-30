@@ -1,0 +1,34 @@
+@import "mixin.lib";
+.b-content-wrap {
+  @extend %clearfix;
+  width: 1010px;
+  margin: 0 auto;
+  .b-intro {
+    font: {
+      size: 22px;
+      weight: 300;
+      style: italic;
+    }
+    line-height: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  .b-content {
+    float: left;
+    width: 670px;
+    height: 200px;
+    padding: 20px;
+    @include sass-box-sizing($type: "border");
+    @include main-color-opacity();
+  }
+  .b-sidebar {
+    float: right;
+    width: 310px;
+    height: 400px;
+    padding: 20px;
+    @include sass-box-sizing($type: "border");
+    @include main-color-opacity();
+  }
+}
+

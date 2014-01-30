@@ -1,0 +1,15 @@
+@mixin main-color-opacity($bg: #000, $op: 0.44) {
+  background: $bg;
+  opacity: $op;
+}
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@mixin sass-box-sizing($type: "border") {
+///* Acceptable values are border, content, and padding - content is the default W3C model */
+  box-sizing: #{$type}-box;
+  -webkit-box-sizing: #{$type}-box;
+  -moz-box-sizing: #{$type}-box;
+}
