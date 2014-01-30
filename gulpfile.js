@@ -18,7 +18,7 @@ gulp.task('template:jade', function() {
 
 gulp.task('css:sass', function() {
     gulp.src('./components/**/*.scss')
-        .pipe(sass())
+        .pipe(sass({includePaths: ['./components/']}))
         .pipe(gulp.dest('./assets/css'))
         .pipe(refresh(server));
 });
