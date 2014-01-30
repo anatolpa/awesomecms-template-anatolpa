@@ -1,0 +1,19 @@
+@import "mixin.lib";
+.b-footer-wrap {
+  @include main-color-opacity();
+  margin-top: 60px;
+  .b-footer {
+    width: 1010px;
+    margin: 0 auto;
+    padding: 25px 0;
+    overflow: hidden;
+  }
+}
+
+.b-footer-site-generator-wrap {
+  @include main-color-opacity($op: 0.55);
+  .footer-site-generator {
+    width: 1010px;
+    margin: 0 auto;
+  }
+}
