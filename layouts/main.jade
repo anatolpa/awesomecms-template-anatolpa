@@ -1,4 +1,5 @@
 include mixins
+- var componentsPath = '../../components';
 doctype html
 html
     head
@@ -8,13 +9,17 @@ html
         title My Site
         link(rel='stylesheet', type='text/css', href='../css/b-page/b-page.css')
         link(rel='stylesheet', type='text/css', href='../css/b-header/b-header.css')
-        link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,700,700italic|Open+Sans+Condensed:300,700', rel="stylesheet", type='text/css')
+        link(rel='stylesheet', type='text/css', href='../css/b-content/b-content.css')
+        link(rel='stylesheet', type='text/css', href='../css/b-footer/b-footer.css')
+        script(type='text/javascript' src='../js/b-page/js/jquery-1.7.2.min.js')
+        script(type='text/javascript' src='../js/b-page/js/jquery.backstretch.min.js')
+        script $.backstretch("#{componentsPath}/b-page/images/bg/1.jpg");
     body
         div.b-page
             div.b-header-wrap
                 div.b-header
                     div.b-logo
-                        a(href='main.html'): img(src='../../components/b-header/images/logo2x.png')
+                        a(href='main.html'): img(src='#{componentsPath}/b-header/images/logo.png')
                     div.b-menu
                         ul
                             mixin menuLi({page: page, url:"#", text: "Contact"})
@@ -29,9 +34,41 @@ html
                             mixin menuLi({page: page, url:"#", text: "Blog"})
                             ul
                                 mixin menuLi({page: page, url:"#", text: "Blog Post"})
-            div.b-content
+            div.b-content-wrap
+                div.b-intro
+                    | Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum, Vestibulum id ligula porta.
+                ul.b-social
+                    li: a(href='#', class='b-social__rss')
+                    li: a(href='#', class='b-social__facebook')
+                    li: a(href='#', class='b-social__twitter')
+                    li: a(href='#', class='b-social__pinterest')
+                    li: a(href='#', class='b-social__dribbble')
+                    li: a(href='#', class='b-social__flickr')
+                    li: a(href='#', class='b-social__linkedin')
+
+                div.b-content
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    | proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    | proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 div.b-sidebar
-                div.b-posts
-                div.push
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    | proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             div.b-footer-wrap
                 div.b-footer
+            div.b-footer-site-generator-wrap
+                div.footer-site-generator
+                    | Copyright Obscura 2012. Design by <a href="http://elemisfreebies.com">elemis</a>. All rights reserved.
