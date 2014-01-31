@@ -1,6 +1,11 @@
-@mixin main-color-opacity($bg: #000, $op: 0.44) {
-  background: $bg;
-  opacity: $op;
+@mixin rgba-background($hexcolor, $opacity) {
+  background-color: $hexcolor;
+  background-color: rgba($hexcolor, $opacity);
+}
+@mixin box-shadow($value) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
 }
 %clearfix:after {
   content: "";
