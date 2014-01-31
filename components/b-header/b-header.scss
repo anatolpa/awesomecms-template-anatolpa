@@ -1,22 +1,108 @@
+@import "mixin.lib";
+$menu-item: #dedede;
+$menu-active: #86aca3;
+$components-path: "../../../components";
+$b-header-images-path: "#{$components-path}/b-header/images";
 .b-header-wrap {
-  height: 74px;
+  @extend %clearfix;
   width: 100%;
-  background: #000;
-  opacity: 0.33;
-}
-.b-header {
-  @extend .b-header;
-  width: 1010px;
-  margin: {
-    top: 0;
-    left: auto;
-    right: auto;
-    bottom: 40px;
+  @include rgba-background(#000, 0.33);
+  margin-bottom: 40px;
+  .b-header {
+    width: 1010px;
+    margin: 0 auto;
+    .b-logo {
+      float: left;
+      padding-top: 22px;
+    }
+    .b-menu {
+      float: right;
+      position: relative;
+      padding: 30px 0;
+      ul {
+        margin: 0;
+        list-style-type: none;
+        position: relative;
+        li {
+          position: relative;
+          float: left;
+          background: none;
+          padding-left: 15px;
+          margin-left: 15px;
+          a {
+            display: block;
+            text-decoration: none;
+            line-height: 1;
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size: 14px;
+            letter-spacing: 0.4px;
+            color: $menu-item;
+            @include transition(all, 200ms, ease-in);
+            padding: 0;
+            font-weight: bold;
+            &:hover {
+              color: $menu-active;
+            }
+          }
+          &.active {
+            a {
+              color: $menu-active;
+            }
+            li {
+              a {
+                color: $menu-item;
+              }
+            }
+          }
+          ul {
+            position: absolute;
+            left: 0;
+            display: none;
+            visibility: hidden;
+            width: 160px;
+            padding: 31px 0 0 0;
+            ul {
+              padding: 0;
+            }
+            li {
+              display: list-item;
+              float: none;
+              background-color: #2c2c2c;
+              padding: 0 15px;
+              margin: 0;
+              &:first-child {
+                background-image: none;
+                a {
+                  background: none;
+                }
+              }
+              ul {
+                top: 0;
+              }
+              a {
+                margin: 0;
+                border: none;
+                padding: 13px 0;
+                line-height: 1;
+                font-size: 13px;
+                background-image: url('#{$b-header-images-path}/line.png') left top repeat-x;
+                &:hover {
+                  color: $menu-active;
+                }
+              }
+
+            }
+          }
+
+        }
+      }
+    }
   }
 }
-.b-logo {
-  float: left;
+* html .menu {
+  height: 1%
 }
-.b-menu {
-  float: right;
-}
+
+
+
+
