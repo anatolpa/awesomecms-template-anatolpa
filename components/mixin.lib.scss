@@ -13,3 +13,11 @@
   -webkit-box-sizing: #{$type}-box;
   -moz-box-sizing: #{$type}-box;
 }
+// Example: @include transition(height, 2s, linear);
+@mixin transition( $property, $duration, $timing_function ) {
+  -webkit-transition: $property $duration $timing_function;
+  -moz-transition: $property $duration $timing_function;
+  -ms-transition: $property $duration $timing_function;
+  -o-transition: $property $duration $timing_function;
+  transition: $property $duration $timing_function;
+}
