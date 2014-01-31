@@ -1,4 +1,6 @@
 @import "mixin.lib";
+$components-path: "../../../components";
+$b-content-images-path: "#{$components-path}/b-content/images";
 .b-content-wrap {
   @extend %clearfix;
   width: 1010px;
@@ -13,6 +15,113 @@
     margin-bottom: 20px;
     text-align: center;
     color: #fff;
+  }
+  // ----------Social----------
+  .b-social {
+    margin-bottom: 40px;
+    text-align: center;
+    li {
+      display: inline;
+      margin: 0 2px;
+      a {
+        background: transparent url('#{$b-content-images-path}/social-icons.png') no-repeat 0 0;
+        height: 32px;
+        width: 32px;
+        display: inline-block;
+        position: relative;
+        @include transition(none, 200ms, ease-in);
+        &.b-social__rss {
+          background-position: 0 0;
+          &:hover {
+            background-position: 0 bottom;
+          }
+        }
+        &.b-social__facebook {
+          background-position: -32px 0;
+          &:hover {
+            background-position: -32px bottom;
+          }
+        }
+        &.b-social__twitter {
+          background-position: -64px 0;
+          &:hover {
+            background-position: -64px bottom;
+          }
+        }
+        &.b-social__dribbble {
+          background-position: -96px 0;
+          &:hover {
+            background-position: -96px bottom;
+          }
+        }
+        &.b-social__pinterest {
+          background-position: -128px 0;
+          &:hover {
+            background-position: -128px bottom;
+          }
+        }
+        &.b-social__flickr {
+          background-position: -160px 0;
+          &:hover {
+            background-position: -160px bottom;
+          }
+        }
+        &.b-social__linkedin {
+          background-position: -192px 0;
+          &:hover {
+            background-position: -192px bottom;
+          }
+        }
+        &.b-social__vimeo {
+          background-position: -224px 0;
+          &:hover {
+            background-position: -224px bottom;
+          }
+        }
+        &.b-social__lastfm {
+          background-position: -256px 0;
+          &:hover {
+            background-position: -256px bottom;
+          }
+        }
+        &.b-social__tumblr {
+          background-position: -288px 0;
+          &:hover {
+            background-position: -288px bottom;
+          }
+        }
+        &.b-social__forrst {
+          background-position: -320px 0;
+          &:hover {
+            background-position: -320px bottom;
+          }
+        }
+        &.b-social__skype {
+          background-position: -352px 0;
+          &:hover {
+            background-position: -352px bottom;
+          }
+        }
+        &.b-social__friendfeed {
+          background-position: -384px 0;
+          &:hover {
+            background-position: -384px bottom;
+          }
+        }
+        &.b-social__deviantart {
+          &:hover {
+            background-position: -416px bottom;
+          }
+        }
+        &.b-social__google {
+          background-position: -448px 0;
+          &:hover {
+            background-position: -448px bottom;
+          }
+        }
+      }
+    }
+
   }
   .b-content {
     float: left;
