@@ -12,33 +12,43 @@ html
         link(rel='stylesheet', type='text/css', href='../css/b-content/b-content.css')
         link(rel='stylesheet', type='text/css', href='../css/b-footer/b-footer.css')
         script(type='text/javascript' src='../js/b-page/js/jquery-1.7.2.min.js')
+        script(type='text/javascript' src='../js/b-page/js/ddsmoothmenu.js')
         script(type='text/javascript' src='../js/b-page/js/jquery.backstretch.min.js')
-        script $.backstretch("#{componentsPath}/b-page/images/bg/1.jpg");
+        script(type='text/javascript' src='../js/b-page/js/jquery.dcflickr.1.0.js')
+        script(type='text/javascript' src='../js/b-page/js/jquery.fitvids.js')
+        script(type='text/javascript' src='../js/b-page/js/jquery.masonry.min.js')
+        script(type='text/javascript' src='../js/b-page/js/mediaelement.min.js')
+        script(type='text/javascript' src='../js/b-page/js/mediaelementplayer.min.js')
+        script(type='text/javascript' src='../js/b-page/js/retina.js')
+        script(type='text/javascript' src='../js/b-page/js/selectnav.js')
+        script(type='text/javascript' src='../js/b-page/js/twitter.min.js')
+        script(type='text/javascript' src='../js/b-page/js/scripts.js')
+        script: $.backstretch("#{componentsPath}/b-page/images/bg/1.jpg");
     body
         div.b-page
             div.b-header-wrap
                 div.b-header
                     div.b-logo
                         a(href='main.html'): img(src='#{componentsPath}/b-header/images/logo.png')
-                    div.b-menu
+                    div#b-menu.b-menu
                         ul
-                            mixin menuLi({page: page, url:"#", text: "Contact"})
-                            mixin menuLi({page: page, url:"#", text: "Styles"})
-                            ul
-                                mixin menuLi({page: page, url:"#", text: "Typography"})
-                                mixin menuLi({page: page, url:"#", text: "Columns"})
-                            mixin menuLi({page: page, url:"#", text: "Pages"})
-                            ul
-                                mixin menuLi({page: page, url:"#", text: "Page With Sidebar"})
-                                mixin menuLi({page: page, url:"#", text: "Full Width"})
-                            mixin menuLi({page: page, url:"#", text: "Blog"})
-                            ul
-                                mixin menuLi({page: page, url:"#", text: "Blog Post"})
+                            li.active: a(href='#') Blog
+                                ul
+                                    li: a(href='#') Blog Post
+                            li: a(href='#') Pages
+                                ul
+                                    li: a(href='#') Page With Sidebar
+                                    li: a(href='#') Full Width
+                            li: a(href='#') Styles
+                                ul
+                                    li: a(href='#') Typography
+                                    li: a(href='#') Columns
+                            li: a(href='#') Contact
             div.b-content-wrap
                 div.b-intro
                     | Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum, Vestibulum id ligula porta.
                 ul.b-social
-                    li: a(href='#', class='b-social__rss')
+                    li.active: a(href='#', class='b-social__rss')
                     li: a(href='#', class='b-social__facebook')
                     li: a(href='#', class='b-social__twitter')
                     li: a(href='#', class='b-social__pinterest')
