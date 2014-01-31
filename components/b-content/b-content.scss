@@ -129,7 +129,7 @@ $b-content-images-path: "#{$components-path}/b-content/images";
     height: 200px;
     padding: 20px;
     @include sass-box-sizing($type: "border");
-    @include main-color-opacity();
+    @include rgba-background(#000, 0.44);
   }
   .b-sidebar {
     float: right;
@@ -137,7 +137,7 @@ $b-content-images-path: "#{$components-path}/b-content/images";
     height: 400px;
     padding: 20px;
     @include sass-box-sizing($type: "border");
-    @include main-color-opacity();
+    @include rgba-background(#000, 0.44);
   }
 }
 

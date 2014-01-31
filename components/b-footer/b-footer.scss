@@ -1,6 +1,6 @@
 @import "mixin.lib";
 .b-footer-wrap {
-  @include main-color-opacity();
+  @include rgba-background(#000, 0.44);
   margin-top: 60px;
   .b-footer {
     width: 1010px;
@@ -11,7 +11,7 @@
 }
 
 .b-footer-site-generator-wrap {
-  @include main-color-opacity($op: 0.55);
+  @include rgba-background(#000, 0.55);
   .footer-site-generator {
     width: 1010px;
     margin: 0 auto;
