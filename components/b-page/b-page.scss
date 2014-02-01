@@ -110,32 +110,6 @@ $open-sans-path: "#{$components-path}/b-page/fonts";
 }
 /* END Italic */
 
-/* BEGIN Semibold */
-@font-face {
-  font-family: 'Open Sans';
-  src: url('#{$open-sans-path}/Semibold/OpenSans-Semibold.eot');
-  src: url('#{$open-sans-path}/Semibold/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),
-  url('#{$open-sans-path}/Semibold/OpenSans-Semibold.woff') format('woff'),
-  url('#{$open-sans-path}/Semibold/OpenSans-Semibold.ttf') format('truetype'),
-  url('#{$open-sans-path}/Semibold/OpenSans-Semibold.svg#OpenSansSemibold') format('svg');
-  font-weight: 600;
-  font-style: normal;
-}
-/* END Semibold */
-
-/* BEGIN Semibold Italic */
-@font-face {
-  font-family: 'Open Sans';
-  src: url('#{$open-sans-path}/SemiboldItalic/OpenSans-SemiboldItalic.eot');
-  src: url('#{$open-sans-path}/SemiboldItalic/OpenSans-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
-  url('#{$open-sans-path}/SemiboldItalic/OpenSans-SemiboldItalic.woff') format('woff'),
-  url('#{$open-sans-path}/SemiboldItalic/OpenSans-SemiboldItalic.ttf') format('truetype'),
-  url('#{$open-sans-path}/SemiboldItalic/OpenSans-SemiboldItalic.svg#OpenSansSemiboldItalic') format('svg');
-  font-weight: 600;
-  font-style: italic;
-}
-/* END Semibold Italic */
-
 /* BEGIN Bold */
 @font-face {
   font-family: 'Open Sans';
@@ -162,31 +136,32 @@ $open-sans-path: "#{$components-path}/b-page/fonts";
 }
 /* END Bold Italic */
 
-/* BEGIN Extrabold */
+/* BEGIN CondLight */
 @font-face {
-  font-family: 'Open Sans';
-  src: url('#{$open-sans-path}/ExtraBold/OpenSans-ExtraBold.eot');
-  src: url('#{$open-sans-path}/ExtraBold/OpenSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
-  url('#{$open-sans-path}/ExtraBold/OpenSans-ExtraBold.woff') format('woff'),
-  url('#{$open-sans-path}/ExtraBold/OpenSans-ExtraBold.ttf') format('truetype'),
-  url('#{$open-sans-path}/ExtraBold/OpenSans-ExtraBold.svg#OpenSansExtrabold') format('svg');
-  font-weight: 800;
+  font-family: 'Open Sans Condensed';
+  src: url('#{$open-sans-path}/CondLight/OpenSans-CondLight-webfont-webfont.eot');
+  src: url('#{$open-sans-path}/CondLight/OpenSans-CondLight-webfont.eot?#iefix') format('embedded-opentype'),
+  url('#{$open-sans-path}/CondLight/OpenSans-CondLight-webfont.woff') format('woff'),
+  url('#{$open-sans-path}/CondLight/OpenSans-CondLight-webfont.ttf') format('truetype'),
+  url('#{$open-sans-path}/CondLight/OpenSans-CondLight-webfont.svg#OpenSansCondLight') format('svg');
+  font-weight: 300;
   font-style: normal;
 }
-/* END Extrabold */
+/* END CondLight */
 
-/* BEGIN Extrabold Italic */
+/* BEGIN CondBold */
 @font-face {
-  font-family: 'Open Sans';
-  src: url('#{$open-sans-path}/ExtraBoldItalic/OpenSans-ExtraBoldItalic.eot');
-  src: url('#{$open-sans-path}/ExtraBoldItalic/OpenSans-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
-  url('#{$open-sans-path}/ExtraBoldItalic/OpenSans-ExtraBoldItalic.woff') format('woff'),
-  url('#{$open-sans-path}/ExtraBoldItalic/OpenSans-ExtraBoldItalic.ttf') format('truetype'),
-  url('#{$open-sans-path}/ExtraBoldItalic/OpenSans-ExtraBoldItalic.svg#OpenSansExtraboldItalic') format('svg');
-  font-weight: 800;
-  font-style: italic;
+  font-family: 'Open Sans Condensed';
+  src: url('#{$open-sans-path}/CondBold/OpenSans-CondBold-webfont.eot');
+  src: url('#{$open-sans-path}/CondBold/OpenSans-CondBold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('#{$open-sans-path}/CondBold/OpenSans-CondBold-webfont.woff') format('woff'),
+  url('#{$open-sans-path}/CondBold/OpenSans-CondBold-webfont.ttf') format('truetype'),
+  url('#{$open-sans-path}/CondBold/OpenSans-CondBold-webfont.svg#OpenSansCondBold') format('svg');
+  font-weight: bold;
+  font-style: normal;
 }
-/* END Extrabold Italic */
+/* END CondBold */
+
 
 /* -------------------------------------------- */
 
