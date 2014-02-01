@@ -1,4 +1,3 @@
-include mixins
 - var componentsPath = '../../components';
 doctype html
 html
@@ -32,18 +31,27 @@ html
                         a(href='main.html'): img(src='#{componentsPath}/b-header/images/logo.png')
                     div#b-menu.b-menu
                         ul
-                            li.active: a(href='#') Blog
+                            li.active
+                                a(href='#') Blog
                                 ul
-                                    li: a(href='#') Blog Post
-                            li: a(href='#') Pages
+                                    li
+                                        a(href='#') Blog Post
+                            li
+                                a(href='#') Pages
                                 ul
-                                    li: a(href='#') Page With Sidebar
-                                    li: a(href='#') Full Width
-                            li: a(href='#') Styles
+                                    li
+                                        a(href='#') Page With Sidebar
+                                    li
+                                        a(href='#') Full Width
+                            li
+                                a(href='#') Styles
                                 ul
-                                    li: a(href='#') Typography
-                                    li: a(href='#') Columns
-                            li: a(href='#') Contact
+                                    li
+                                        a(href='#') Typography
+                                    li
+                                        a(href='#') Columns
+                            li
+                                a(href='#') Contact
             div.b-content-wrap
                 div.b-intro
                     | Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum, Vestibulum id ligula porta.
