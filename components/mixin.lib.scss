@@ -26,3 +26,21 @@
   -o-transition: $property $duration $timing_function;
   transition: $property $duration $timing_function;
 }
+
+
+
+@mixin m-query-respond-to($media) {
+  @if $media == ipad-landscape {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) { @content; }
+  }
+  @else if $media == medium-screen {
+    @media only screen and (min-width: 768px) and (max-width: 959px) { @content; }
+  }
+
+  @else if $media == tablet {
+    @media only screen and (min-width: 480px) and (max-width: 767px) { @content; }
+  }
+  @else if $media == mobile {
+    @media only screen and (max-width: 479px) { @content; }
+  }
+}

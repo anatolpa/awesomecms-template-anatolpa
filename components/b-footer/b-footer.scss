@@ -8,13 +8,37 @@
     margin: 0 auto;
     padding: 25px 0;
     overflow: hidden;
+    @include m-query-respond-to(ipad-landscape){
+      width:960px;
+    }
+    @include m-query-respond-to(medium-screen){
+      width:720px;
+    }
+    @include m-query-respond-to(tablet){
+      width: 440px;
+    }
+    @include m-query-respond-to(mobile){
+      width: 280px;
+    }
   }
 }
 
 .b-footer-site-generator-wrap {
   @include rgba-background(#000, 0.55);
-  .footer-site-generator {
+  .b-footer-site-generator {
     width: 1010px;
     margin: 0 auto;
+    @include m-query-respond-to(ipad-landscape){
+      width:960px;
+    }
+    @include m-query-respond-to(medium-screen){
+      width:720px;
+    }
+    @include m-query-respond-to(tablet){
+      width: 440px;
+    }
+    @include m-query-respond-to(mobile){
+      width: 280px;
+    }
   }
 }

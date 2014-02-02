@@ -5,6 +5,18 @@ $b-content-images-path: "#{$components-path}/b-content/images";
   @extend %clearfix;
   width: 1010px;
   margin: 0 auto;
+  @include m-query-respond-to(ipad-landscape){
+    width:960px;
+  }
+  @include m-query-respond-to(medium-screen){
+    width:720px;
+  }
+  @include m-query-respond-to(tablet){
+    width: 440px;
+  }
+  @include m-query-respond-to(mobile){
+    width: 280px;
+  }
   .b-intro {
     font: {
       size: 22px;
@@ -126,6 +138,20 @@ $b-content-images-path: "#{$components-path}/b-content/images";
   .b-content {
     float: left;
     width: 670px;
+    @include m-query-respond-to(ipad-landscape){
+      width: 640px;
+    }
+    @include m-query-respond-to(medium-screen){
+      width: 470px;
+    }
+    @include m-query-respond-to(tablet){
+      width: 440px;
+      float: none;
+    }
+    @include m-query-respond-to(mobile){
+      width: 280px;
+      float: none;
+    }
   }
   .b-content_box_current {
     padding: 20px;
@@ -139,6 +165,24 @@ $b-content-images-path: "#{$components-path}/b-content/images";
   .b-sidebar {
     float: right;
     width: 310px;
+    @include m-query-respond-to(ipad-landscape){
+      width: 290px;
+    }
+    @include m-query-respond-to(medium-screen){
+      width: 220px;
+    }
+    @include m-query-respond-to(tablet){
+      width: 440px;
+      clear: both;
+      margin: 30px 0 0 0 !important;
+      float: none;
+    }
+    @include m-query-respond-to(mobile){
+      width: 280px;
+      clear: both;
+      margin: 30px 0 0 0 !important;
+      float: none;
+    }
   }
 }
 

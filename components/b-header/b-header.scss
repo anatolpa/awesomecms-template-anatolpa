@@ -12,18 +12,58 @@ $b-header-images-path: "#{$components-path}/b-header/images";
   .b-header {
     width: 1010px;
     margin: 0 auto;
+    @include m-query-respond-to(ipad-landscape){
+      width:960px;
+    }
+    @include m-query-respond-to(medium-screen){
+      width:720px;
+    }
+    @include m-query-respond-to(tablet){
+      width: 440px;
+    }
+    @include m-query-respond-to(mobile){
+      width: 280px;
+    }
     .b-logo {
       float: left;
       padding-top: 22px;
+      @include m-query-respond-to(tablet){
+        float: none;
+        text-align: center;
+      }
+      @include m-query-respond-to(mobile){
+        float: none;
+        text-align: center;
+      }
+      img {
+        @include m-query-respond-to(tablet){
+          display: inline;
+        }
+        @include m-query-respond-to(mobile){
+          display: inline;
+        }
+      }
     }
     .b-menu {
       float: right;
       position: relative;
       padding: 30px 0;
+      @include m-query-respond-to(tablet){
+        float: none;
+      }
+      @include m-query-respond-to(mobile){
+        float: none;
+      }
       ul {
         margin: 0;
         list-style-type: none;
         position: relative;
+        @include m-query-respond-to(tablet){
+          display: none;
+        }
+        @include m-query-respond-to(mobile){
+          display: none;
+        }
         li {
           position: relative;
           float: left;
@@ -86,7 +126,7 @@ $b-header-images-path: "#{$components-path}/b-header/images";
                 padding: 13px 0;
                 line-height: 1;
                 font-size: 13px;
-                background-image: url('#{$b-header-images-path}/line.png') left top repeat-x;
+                background: url('#{$b-header-images-path}/line.png') left top repeat-x;
                 &:hover {
                   color: $menu-active;
                 }
@@ -97,11 +137,24 @@ $b-header-images-path: "#{$components-path}/b-header/images";
 
         }
       }
+      .b-menu__selectnav {
+        display: none;
+        width: 280px;
+        margin: 0 auto;
+        @include m-query-respond-to(tablet){
+          display: block;
+          float: none;
+        }
+        @include m-query-respond-to(mobile){
+          display: block;
+          float: none;
+        }
+      }
     }
   }
 }
 * html .menu {
-  height: 1%
+  height: 1%;
 }
 
 

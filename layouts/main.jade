@@ -7,6 +7,7 @@ html
         meta(keywords='')
         title My Site
         link(rel='stylesheet', type='text/css', href='../css/b-page/b-page.css')
+        link(rel='stylesheet', type='text/css', href='../css/b-page/media-queries.css')
         link(rel='stylesheet', type='text/css', href='../css/b-header/b-header.css')
         link(rel='stylesheet', type='text/css', href='../css/b-content/b-content.css')
         link(rel='stylesheet', type='text/css', href='../css/b-footer/b-footer.css')
@@ -52,6 +53,17 @@ html
                                         a(href='#') Columns
                             li
                                 a(href='#') Contact
+                        select.b-menu__selectnav
+                            option(value='') --- Navigation ---
+                            option(value='#') Blog
+                            option(value='#') Blog Post
+                            option(value='#') Pages
+                            option(value='#') Page With Sidebar
+                            option(value='#') Full Width
+                            option(value='#') Styles
+                            option(value='#') Typography
+                            option(value='#') Columns
+                            option(value='#') Contact
             div.b-content-wrap
                 div.b-intro
                     | Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum, Vestibulum id ligula porta.
@@ -88,5 +100,5 @@ html
             div.b-footer-wrap
                 div.b-footer
             div.b-footer-site-generator-wrap
-                div.footer-site-generator
+                div.b-footer-site-generator
                     | Copyright Obscura 2012. Design by <a href="http://elemisfreebies.com">elemis</a>. All rights reserved.
