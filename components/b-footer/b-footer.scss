@@ -3,6 +3,7 @@
   @include rgba-background(#000, 0.44);
   @include box-shadow(0 -1px 0 rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.09));
   margin-top: 60px;
+  @extend %clearfix;
   .b-footer {
     width: 1010px;
     margin: 0 auto;
@@ -20,9 +21,95 @@
     @include m-query-respond-to(mobile){
       width: 280px;
     }
+    .b-widget {
+      float: left;
+      margin-right: 3.7%;
+      width: 22.2%;
+      &:last-child {
+        margin-right: 0;
+      }
+      .b-widget__title {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        color: $main-text;
+        &:hover {
+          color: $link-hover;
+        }
+      }
+      .b-widget__post-list {
+        color: $main-text;
+//        padding-bottom: 10px;
+        .b-widget__frame {
+          float: left;
+          margin-right: 15px;
+          position: relative;
+        }
+        .b-widget__meta {
+          overflow: hidden;
+          h6 {
+            margin-bottom: 5px;
+            font: {
+              family: 'Open Sans', sans-serif;
+              size: 12px;
+              weight: 400;
+            }
+            line-height: 21px;
+          }
+          span {
+//            display: inline-block;
+            font-size: 11px;
+            color: #797979;
+          }
+        }
+        li {
+          @extend %clearfix;
+          margin-bottom: 11px;
+        }
+      }
+      .b-widget__flickr-feed {
+        width: 110%;
+        margin-right: -11px;
+        .frame {
+          width: 67px;
+          margin-right: 11px;
+          margin-bottom: 11px;
+          float: left;
+          position: relative;
+          &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            @include box-shadow(inset 0 0 1px 0 rgba(255,255,255,0.7), 0px 0px 0px 1px rgba(0, 0, 0, 0.44));
+          }
+          a {
+            .more {
+              display: none;
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              text-align: center;
+              text-decoration: none;
+              z-index: 100;
+              background: rgba(0, 0, 0, 0.55) url('#{$b-footer-images-path}/icon-more.png') no-repeat center center;
+            }
+          }
+          img {
+            width: 67px;
+            height: 67px;
+          }
+        }
+      }
+    }
   }
 }
-
 .b-footer-site-generator-wrap {
   @include rgba-background(#000, 0.55);
   .b-footer-site-generator {
@@ -41,4 +128,8 @@
       width: 280px;
     }
   }
+}
+.b-widget__searchform input {
+  padding: 8px 10px;
+  margin-bottom: 20px;
 }

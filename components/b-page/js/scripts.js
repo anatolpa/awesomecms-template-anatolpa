@@ -54,11 +54,11 @@ $(document).ready(function(){
 /*	IMAGE HOVER
 /*-----------------------------------------------------------------------------------*/
 
-    $('.quick-flickr-item').addClass("frame");
-    $('.frame a').prepend('<span class="more"></span>');
+//    $('.quick-flickr-item').addClass("b-page__img_frame_hover");
+    $('.b-page__img_frame_hover a').prepend('<span class="more"></span>');
 
 
-    $('.frame').mouseenter(function(e) {
+    $('.b-page__img_frame_hover').mouseenter(function(e) {
 
         $(this).children('a').children('span').fadeIn(300);
     }).mouseleave(function(e) {
@@ -85,7 +85,7 @@ getTwitters('twitter', {
 /*-----------------------------------------------------------------------------------*/
 
 $(document).ready(function(){
-	$('.flickr-feed').dcFlickr({
+	$('.b-widget__flickr-feed').dcFlickr({
 		limit: 9, 
         q: { 
             id: '51789731@N07',

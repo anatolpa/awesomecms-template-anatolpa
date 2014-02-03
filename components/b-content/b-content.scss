@@ -1,6 +1,4 @@
 @import "mixin.lib";
-$components-path: "../../../components";
-$b-content-images-path: "#{$components-path}/b-content/images";
 .b-content-wrap {
   @extend %clearfix;
   width: 1010px;

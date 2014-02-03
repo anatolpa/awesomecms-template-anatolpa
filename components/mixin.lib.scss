@@ -27,8 +27,6 @@
   transition: $property $duration $timing_function;
 }
 
-
-
 @mixin m-query-respond-to($media) {
   @if $media == ipad-landscape {
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) { @content; }
@@ -44,3 +42,18 @@
     @media only screen and (max-width: 479px) { @content; }
   }
 }
+
+// ---------General Variables------------
+
+$components-path: "../../../components";
+$open-sans-path: "#{$components-path}/b-page/fonts";
+$b-page-images-path: "#{$components-path}/b-page/images";
+$b-header-images-path: "#{$components-path}/b-header/images";
+$b-content-images-path: "#{$components-path}/b-content/images";
+$b-footer-images-path: "#{$components-path}/b-footer/images";
+
+$main-text: #b9b9b9;
+$menu-item: #dedede;
+$menu-active: #86aca3;
+$link: #65817a;
+$link-hover: #86aca3;

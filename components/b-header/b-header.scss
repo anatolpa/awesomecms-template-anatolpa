@@ -1,8 +1,4 @@
 @import "mixin.lib";
-$menu-item: #dedede;
-$menu-active: #86aca3;
-$components-path: "../../../components";
-$b-header-images-path: "#{$components-path}/b-header/images";
 .b-header-wrap {
   @extend %clearfix;
   width: 100%;
