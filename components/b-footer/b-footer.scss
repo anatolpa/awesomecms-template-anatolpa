@@ -25,6 +25,16 @@
       float: left;
       margin-right: 3.7%;
       width: 22.2%;
+      @include m-query-respond-to(tablet){
+        float: none;
+        margin: 0 0 40px 0;
+        width: auto;
+      }
+      @include m-query-respond-to(mobile){
+        float: none;
+        margin: 0 0 40px 0;
+        width: auto;
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -62,7 +72,7 @@
             line-height: 21px;
           }
           span {
-//            display: inline-block;
+            display: inline-block;
             font-size: 11px;
             color: #797979;
           }
@@ -104,6 +114,8 @@
           img {
             width: 67px;
             height: 67px;
+            display: block;
+            max-width: 100%;
           }
         }
       }
@@ -115,6 +127,7 @@
   .b-footer-site-generator {
     width: 1010px;
     margin: 0 auto;
+    padding: 20px 0;
     @include m-query-respond-to(ipad-landscape){
       width:960px;
     }

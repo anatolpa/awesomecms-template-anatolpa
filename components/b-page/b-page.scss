@@ -50,6 +50,9 @@ table {
 a img {
   border: none;
 }
+:focus {
+  outline:0
+}
 
 
 /* ------------------Font---------------------- */
@@ -191,6 +194,11 @@ body {
 .b-page {
   background: url('#{$b-page-images-path}/tile.png') scroll;
   width: 100%;
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 }
 input,
 textarea {
@@ -347,7 +355,6 @@ hr {
 .b-page__img_frame_hover {
   display: block;
   position: relative;
-//  pointer-events: none;
   &:before {
     content: '';
     position: absolute;
