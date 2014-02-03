@@ -43,7 +43,7 @@ html
                                     li
                                         a(href='#') Page With Sidebar
                                     li
-                                        a(href='#') Full Width
+                                        a(href='?p=full-width') Full Width
                             li
                                 a(href='#') Styles
                                 ul
@@ -76,68 +76,10 @@ html
                     li: a(href='#', class='b-social__flickr')
                     li: a(href='#', class='b-social__linkedin')
 
-                div.b-content.b-content_box_current
-                    h1.title Page with Sidebar
-                    p Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                    img(src="#{componentsPath}/b-content/images/se1.jpg")
-                    p Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                    h3 Inceptos Mollis
-                    p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                    p Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-                    p Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas sed diam eget risus varius blandit sit amet non magna. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-                    p Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis.
-                div.b-sidebar.b-content_box_current
-                    div.b-widget
-                        img(src="#{componentsPath}/b-content/images/se1.jpg")
-                    div.b-widget
-                        div.b-widget__post-list
-                            h3.b-widget__title Popular Posts
-                            ul.b-widget__post-list
-                                li
-                                    div.b-widget__frame.b-page__img_frame_hover
-                                        a(href="#")
-                                            img(src="#{componentsPath}/b-footer/images/s1.jpg")
-                                    div.b-widget__meta
-                                        h6
-                                            a(href="#") Charming Winter
-                                        span 28th Sep 2012
-                                li
-                                    div.b-widget__frame.b-page__img_frame_hover
-                                        a(href="#")
-                                            img(src="#{componentsPath}/b-footer/images/s2.jpg")
-                                    div.b-widget__meta
-                                        h6
-                                            a(href="#") Trickling Stream
-                                        span 5th Sep 2012
-                                li
-                                    div.b-widget__frame.b-page__img_frame_hover
-                                        a(href="#")
-                                            img(src="#{componentsPath}/b-footer/images/s3.jpg")
-                                    div.b-widget__meta
-                                        h6
-                                            a(href="#") Morning Glory
-                                        span 26th Sep 2012
-                    div.b-widget
-                        div.b-widget__search
-                            h3.b-widget__title Search
-                            form.b-widget__searchform(action="#", method="get")
-                                input(type="text", value="", placeholder="type and hit enter")
-                    div.b-widget
-                        div.b-widget__text-box
-                            h3.b-widget__title Custom Text
-                            div Suspendisse eu odio quis elit ultrice commodo tempor eget arcu. Sedur aliquet posuere lectus aliquam iaculi. Curabitur a risus metus. In ut lorem nisl, et adipiscing sapien. Donec sed risus tristiq scelerisque.
-                    div.b-widget
-                        div.b-widget__cat-list
-                            h3.b-widget__title Categories
-                            ul
-                                li: a(href="#") Detektivbyrån
-                                li: a(href="#") Flowers
-                                li: a(href="#") Funny
-                                li: a(href="#") Journal
-                                li: a(href="#") Landscape
-                                li: a(href="#") Nature
-                                li: a(href="#") Photography
-                                li: a(href="#") Video
+                //include page-with-sidebar
+                //include full-width
+                include columns
+
             div.b-footer-wrap
                 div.b-footer
                     div.b-widget
