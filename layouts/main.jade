@@ -1,4 +1,4 @@
-- var componentsPath = '../../components';
+- var componentsPath = '../images';
 doctype html
 html
     head
@@ -7,11 +7,7 @@ html
         meta(keywords='')
         meta(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
         title My Site
-        link(rel='stylesheet', type='text/css', href='../css/b-page/b-page.css')
-        link(rel='stylesheet', type='text/css', href='../css/b-page/player/mediaelementplayer.css')
-        link(rel='stylesheet', type='text/css', href='../css/b-header/b-header.css')
-        link(rel='stylesheet', type='text/css', href='../css/b-content/b-content.css')
-        link(rel='stylesheet', type='text/css', href='../css/b-footer/b-footer.css')
+        link(rel='stylesheet', type='text/css', href='../css/styles.css')
         script(type='text/javascript' src='../js/b-page/js/jquery-1.7.2.min.js')
         script(type='text/javascript' src='../js/b-page/js/ddsmoothmenu.js')
         script(type='text/javascript' src='../js/b-page/js/jquery.backstretch.min.js')
@@ -25,7 +21,7 @@ html
         script.
              $.backstretch("#{componentsPath}/b-page/images/bg/1.jpg");
     body
-        div.b-page.single
+        div.b-page
             div.b-header-wrap
                 div.b-header
                     div.b-logo
@@ -41,9 +37,9 @@ html
                                 a(href='#') Pages
                                 ul
                                     li
-                                        a(href='#') Page With Sidebar
+                                        a(href='page-with-sidebar.html') Page With Sidebar
                                     li
-                                        a(href='?p=full-width') Full Width
+                                        a(href='') Full Width
                             li
                                 a(href='#') Styles
                                 ul
