@@ -1,4 +1,5 @@
 @import "mixin.lib";
+@import "mediaelementplayer";
 /* Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
 
@@ -163,22 +164,9 @@ a img {
 }
 /* END CondBold */
 
-
-/* -------------------------------------------- */
-
-/* ------------------Style---------------------- */
-/* -------------------------------------------- */
-
-/* ------------------Layout---------------------- */
-/* -------------------------------------------- */
-
-
-html {
-//  height: 100%;
-}
+/*--------Global----------*/
 body {
   @extend html;
-//  background: url(../../../components/b-page/images/bg/1.jpg) no-repeat scroll;
   font: {
     family: 'Open Sans', sans-serif;
     size: 12px;
@@ -187,9 +175,6 @@ body {
   line-height: 21px;
   letter-spacing: 0.2px;
   color: $main-text;
-}
-.push {
-  clear: both;
 }
 .b-page {
   background: url('#{$b-page-images-path}/tile.png') scroll;
@@ -209,9 +194,7 @@ textarea {
   font-weight: 400;
   font-size: 12px;
   line-height: 21px;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box; /* Firefox, other Gecko */
-  box-sizing: border-box; /* Opera/IE 8+ */
+  @include sass-box-sizing($type: "border");
   width: 100%;
 }
 input:focus,
@@ -229,56 +212,6 @@ a {
     color: $link-hover;
   }
 }
-a.more {
-  margin-bottom: 20px;
-  display: inline-block;
-  line-height: 1;
-}
-a.button,
-.forms fieldset .btn-submit,
-#commentform input#submit {
-  font-family: 'Open Sans Condensed', sans-serif;
-  background: #f2f2f2 url(style/images/button.png) repeat-x;
-  height: 31px;
-  line-height: 31px;
-  color: #383838;
-  font-size: 14px;
-  padding: 0px 18px;
-  margin: 0 8px 0 0;
-  display: inline-block;
-  @include transition(all, 200ms, ease-in);
-  cursor: pointer;
-  margin-bottom: 20px;
-  box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
-  width: auto;
-  border: none;
-  font-weight: bold;
-}
-a.button.blue {
-  background-color: #5f9cb8;
-  color: #2d444e;
-}
-a.button.pink {
-  background-color: #b55fb8;
-  color: #443144;
-}
-a.button.purple {
-  background-color: #635fb8;
-  color: #313045;
-}
-a.button.yellow {
-  background-color: #ac9757;
-  color: #433f32;
-}
-a.button.red {
-  background-color: #ac5757;
-  color: #4a3232;
-}
-a.button.green {
-  background-color: #5ca980;
-  color: #2b4638;
-}
 h1,
 h2,
 h3,
@@ -286,7 +219,7 @@ h4,
 h5,
 h6 {
   font-family: 'Open Sans Condensed', sans-serif;
-  color: #dedede;
+  color: $menu-item;
   margin-bottom: 20px;
 }
 h1 {
@@ -322,10 +255,10 @@ h2.title {
 }
 h1.title a,
 h2.title a {
-  color: #dedede
+  color: $menu-item;
 }
 .title a:hover {
-  color: $link-hover
+  color: $link-hover;
 }
 ul {
   margin-bottom: 20px;
@@ -344,13 +277,6 @@ ol {
 ol li {
   padding: 0;
   margin: 0;
-}
-hr {
-  border: none;
-  background: transparent url(style/images/line.png) repeat-x;
-  height: 3px;
-  margin-top: 10px;
-  margin-bottom: 30px;
 }
 .b-page__img_frame_hover {
   display: block;
@@ -376,3 +302,11 @@ hr {
     }
   }
 }
+.b-page_text_highlites1 {
+  color: #86aca3;
+  border-bottom: 1px dotted #86aca3;
+}
+.b-page_text_highlites2 {
+  border-bottom: 1px dotted #86aca3;
+}
+

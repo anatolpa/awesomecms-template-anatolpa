@@ -1,0 +1,153 @@
+div.b-post-image
+    div.inset
+        img(src="#{componentsPath}/b-content/images/post1-full.jpg")
+div.b-content
+    div.b-post.b-content_box_current.b-post_format_image
+        div.b-post__meta
+            span.icon-image
+                a(href="#") September 26, 2012
+            span.likes
+                a(href="#") 44
+            span.comments
+                a(href="#") 3
+        h1.b-post__title Morning Glory
+        p A wonderful serenity has taken possession of my entire soul, like these sweet mornings of autumn which I enjoy with my whole heart.
+        div.b-post__tags <a href="#">journal</a>, <a href="#">photography</a>
+        div.b-post__nav
+            span.nav-prev
+                a(href="#") <span class="arrow">←</span> Rock Paper Scissors Lizard Spock
+            span.nav-next
+                a(href="#") Charming Winter <span class="arrow">→</span>
+    div.b-comments.b-content_box_current
+        div.b-comments__comments
+            h3.b-comments__comments-title 3 Responses to "Morning Glory"
+            ol.b-comments__comments-list
+                li.b-comments__comment
+                    div
+                        div.b-comments__avatar
+                            img(src="http://1.gravatar.com/avatar/30b2dad884c817cb09ad5fa61dad7e44?s=70&amp;d=retro&amp;r=G", class="avatar")
+                        div.b-comments__message
+                            span.b-comments__reply-link
+                                a(href="#") Reply
+                            div.b-comments__info
+                                h2
+                                    a(href="#") Marshall Eriksen
+                                span.meta
+                                    a(href="#") September 13, 2012 at 12:32 pm
+                            div.b-comments__comment-body
+                                p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur.
+                li.b-comments__comment
+                    div
+                        div.b-comments__avatar
+                            img(src="http://1.gravatar.com/avatar/30b2dad884c817cb09ad5fa61dad7e44?s=70&amp;d=retro&amp;r=G", class="avatar")
+                        div.b-comments__message
+                            span.b-comments__reply-link
+                                a(href="#") Reply
+                            div.b-comments__info
+                                h2
+                                    a(href="#") Laura
+                                span.meta
+                                    a(href="#") September 13, 2012 at 1:26 pm
+                            div.b-comments__comment-body
+                                p Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    ul.b-comments__children
+                        li.b-comments__comment
+                            div
+                                div.b-comments__avatar
+                                    img(src="http://1.gravatar.com/avatar/30b2dad884c817cb09ad5fa61dad7e44?s=70&amp;d=retro&amp;r=G", class="avatar")
+                                div.b-comments__message
+                                    span.b-comments__reply-link
+                                        a(href="#") Reply
+                                    div.b-comments__info
+                                        h2
+                                            a(href="#") Jason
+                                        span.meta
+                                            a(href="#") September 13, 2012 at 1:27 pm
+                                    div.b-comments__comment-body
+                                        p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor.
+                            ul.b-comments__children
+                                li.b-comments__comment
+                                    div
+                                        div.b-comments__avatar
+                                            img(src="http://1.gravatar.com/avatar/30b2dad884c817cb09ad5fa61dad7e44?s=70&amp;d=retro&amp;r=G", class="avatar")
+                                        div.b-comments__message
+                                            span.b-comments__reply-link
+                                                a(href="#") Reply
+                                            div.b-comments__info
+                                                h2
+                                                    a(href="#") Jason
+                                                span.meta
+                                                    a(href="#") September 13, 2012 at 1:27 pm
+                                            div.b-comments__comment-body
+                                                p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor.
+
+        div.b-comments__form
+            h3.b-comments__form-reply-title Leave a Reply
+            form.b-comments__comment-form(action="#", method="post")
+                p.b-comments__form-notes Your email address will not be published. Required fields are marked <span class="required">*</span>
+                p.b-comments__form-name
+                    label(for='name') Name <span class="required">*</span>
+                    input(id='name', type='text', value='')
+                p.b-comments__form-email
+                    label(for='email') Email <span class="required">*</span>
+                    input(id='email', type='text', value='')
+                p.b-comments__form-url
+                    label(for='url') Website
+                    input(id='url', type='text', value='')
+                p.b-comments__form-comment
+                    label(for='comment') Comment
+                    textarea(id="comment" name="comment" cols="45" rows="8")
+                p.b-comments__form-submit
+                    input(id='submit', type='submit', value='Post Comment')
+div.b-sidebar.b-content_box_current
+    div.b-widget
+        img(src="#{componentsPath}/b-content/images/se1.jpg")
+    div.b-widget
+        div.b-widget__post-list
+            h3.b-widget__title Popular Posts
+            ul.b-widget__post-list
+                li
+                    div.b-widget__frame.b-page__img_frame_hover
+                        a(href="#")
+                            img(src="#{componentsPath}/b-footer/images/s1.jpg")
+                    div.b-widget__meta
+                        h6
+                            a(href="#") Charming Winter
+                        span 28th Sep 2012
+                li
+                    div.b-widget__frame.b-page__img_frame_hover
+                        a(href="#")
+                            img(src="#{componentsPath}/b-footer/images/s2.jpg")
+                    div.b-widget__meta
+                        h6
+                            a(href="#") Trickling Stream
+                        span 5th Sep 2012
+                li
+                    div.b-widget__frame.b-page__img_frame_hover
+                        a(href="#")
+                            img(src="#{componentsPath}/b-footer/images/s3.jpg")
+                    div.b-widget__meta
+                        h6
+                            a(href="#") Morning Glory
+                        span 26th Sep 2012
+    div.b-widget
+        div.b-widget__search
+            h3.b-widget__title Search
+            form.b-widget__searchform(action="#", method="get")
+                input(type="text", value="", placeholder="type and hit enter")
+    div.b-widget
+        div.b-widget__text-box
+            h3.b-widget__title Custom Text
+            div Suspendisse eu odio quis elit ultrice commodo tempor eget arcu. Sedur aliquet posuere lectus aliquam iaculi. Curabitur a risus metus. In ut lorem nisl, et adipiscing sapien. Donec sed risus tristiq scelerisque.
+    div.b-widget
+        div.b-widget__cat-list
+            h3.b-widget__title Categories
+            ul
+                li: a(href="#") Detektivbyrån
+                li: a(href="#") Flowers
+                li: a(href="#") Funny
+                li: a(href="#") Journal
+                li: a(href="#") Landscape
+                li: a(href="#") Nature
+                li: a(href="#") Photography
+                li: a(href="#") Video

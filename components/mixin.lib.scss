@@ -12,6 +12,11 @@
   display: table;
   clear: both;
 }
+%clearfix-before:before {
+  content: "";
+  display: table;
+  clear: both;
+}
 @mixin sass-box-sizing($type: "border") {
 ///* Acceptable values are border, content, and padding - content is the default W3C model */
   box-sizing: #{$type}-box;
@@ -57,3 +62,4 @@ $menu-item: #dedede;
 $menu-active: #86aca3;
 $link: #65817a;
 $link-hover: #86aca3;
+$meta-link: #797979;

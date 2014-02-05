@@ -1,42 +1,8 @@
-/*-----------------------------------------------------------------------------------*/
-/*	POSTS GRID
-/*-----------------------------------------------------------------------------------*/
-
-$(window).load(function(){
-    var $container = $('.blog-grid');
-
-    var gutter = 30;
-    var min_width = 345;
-    $container.imagesLoaded( function(){
-        $container.masonry({
-            itemSelector : '.post',
-            gutterWidth: gutter,
-            isAnimated: true,
-              columnWidth: function( containerWidth ) {
-                var box_width = (((containerWidth - gutter)/2) | 0) ;
-
-                if (box_width < min_width) {
-                    box_width = (((containerWidth - gutter)/2) | 0);
-                }
-
-                if (box_width < min_width) {
-                    box_width = containerWidth;
-                }
-
-                $('.post').width(box_width);
-
-                return box_width;
-              }
-        });
-        $container.css( 'visibility', 'visible' ).parent().removeClass( 'loading' );
-    });
-});
-
+$(document).ready(function(){
 /*-----------------------------------------------------------------------------------*/
 /*	VIDEO
 /*-----------------------------------------------------------------------------------*/
 
-$(document).ready(function(){
     $('.video').fitVids();
 
 /*-----------------------------------------------------------------------------------*/
@@ -54,7 +20,7 @@ $(document).ready(function(){
 /*	IMAGE HOVER
 /*-----------------------------------------------------------------------------------*/
 
-//    $('.quick-flickr-item').addClass("b-page__img_frame_hover");
+    $('.quick-flickr-item').addClass("b-page__img_frame_hover");
     $('.b-page__img_frame_hover a').prepend('<span class="more"></span>');
 
 
@@ -65,6 +31,87 @@ $(document).ready(function(){
 
         $(this).children('a').children('span').fadeOut(200);
     });
+
+/*-----------------------------------------------------------------------------------*/
+/*	FLICKR
+/*-----------------------------------------------------------------------------------*/
+
+    $('.b-widget__flickr-feed').dcFlickr({
+        limit: 9,
+        q: {
+            id: '51789731@N07',
+            lang: 'en-us',
+            format: 'json',
+            jsoncallback: '?'
+        },
+        onLoad: function(){
+            $('.frame a').prepend('<span class="more"></span>');
+            $('.frame').mouseenter(function(e) {
+
+                $(this).children('a').children('span').fadeIn(300);
+            }).mouseleave(function(e) {
+
+                $(this).children('a').children('span').fadeOut(200);
+            });
+        }
+    });
+
+/*-----------------------------------------------------------------------------------*/
+/*	AUDIO PLAYER
+/*-----------------------------------------------------------------------------------*/
+
+    $('audio').mediaelementplayer({
+        audioWidth: '100%',
+        features: ['playpause','progress','tracks'],
+        videoVolume: 'horizontal'
+    });
+
+    $('.blog-grid audio').mediaelementplayer({
+        audioWidth: '100%',
+        features: ['playpause','progress','tracks'],
+        videoVolume: 'horizontal'
+    });
+
+/*-----------------------------------------------------------------------------------*/
+/*	Selectnav
+/*-----------------------------------------------------------------------------------*/
+
+    selectnav('nav');
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	POSTS GRID
+/*-----------------------------------------------------------------------------------*/
+
+    var $container = $('.b-blog-grid');
+
+    var gutter = 30;
+    var min_width = 345;
+    $container.imagesLoaded( function(){
+        $container.masonry({
+            itemSelector : '.b-post',
+            gutterWidth: gutter,
+            isAnimated: true,
+            columnWidth: function( containerWidth ) {
+                var box_width = (((containerWidth - gutter)/2) | 0) ;
+
+                if (box_width < min_width) {
+                    box_width = (((containerWidth - gutter)/2) | 0);
+                }
+
+                if (box_width < min_width) {
+                    box_width = containerWidth;
+                }
+
+                $('.b-post').width(box_width);
+
+                return box_width;
+            }
+        });
+        $container.css( 'visibility', 'visible' ).parent().removeClass( 'loading' );
+    });
+
+
 });
 
 /*-----------------------------------------------------------------------------------*/
@@ -72,58 +119,12 @@ $(document).ready(function(){
 /*-----------------------------------------------------------------------------------*/
 
 getTwitters('twitter', {
-        id: 'elemisdesign', 
-        count: 2, 
-        enableLinks: true, 
-        ignoreReplies: false,
-        template: '<span class="twitterPrefix"><span class="twitterStatus">%text%</span><br /><em class="twitterTime"><a href="http://twitter.com/%user_screen_name%/statuses/%id%">%time%</a></em>',
-        newwindow: true
-});
-
-/*-----------------------------------------------------------------------------------*/
-/*	FLICKR
-/*-----------------------------------------------------------------------------------*/
-
-$(document).ready(function(){
-	$('.b-widget__flickr-feed').dcFlickr({
-		limit: 9, 
-        q: { 
-            id: '51789731@N07',
-			lang: 'en-us',
-			format: 'json',
-			jsoncallback: '?'
-        },
-		onLoad: function(){
-			$('.frame a').prepend('<span class="more"></span>');
-			$('.frame').mouseenter(function(e) {
-
-            $(this).children('a').children('span').fadeIn(300);
-        }).mouseleave(function(e) {
-
-            $(this).children('a').children('span').fadeOut(200);
-        });
-		}
-	});
-});	
-
-/*-----------------------------------------------------------------------------------*/
-/*	AUDIO PLAYER
-/*-----------------------------------------------------------------------------------*/
-
-$(window).load(function(){
-    $('.blog-grid audio').mediaelementplayer({
-        audioWidth: '100%',
-        features: ['playpause','progress','tracks'],
-        videoVolume: 'horizontal'
-    });
-});
-
-$(document).ready(function(){
-    $('.single audio').mediaelementplayer({
-        audioWidth: '100%',
-        features: ['playpause','progress','tracks'],
-        videoVolume: 'horizontal'
-    });
+    id: 'elemisdesign',
+    count: 2,
+    enableLinks: true,
+    ignoreReplies: false,
+    template: '<span class="twitterPrefix"><span class="twitterStatus">%text%</span><br /><em class="twitterTime"><a href="http://twitter.com/%user_screen_name%/statuses/%id%">%time%</a></em>',
+    newwindow: true
 });
 
 /*-----------------------------------------------------------------------------------*/

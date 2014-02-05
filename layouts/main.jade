@@ -5,9 +5,10 @@ html
         meta(charset='utf-8')
         meta(description='')
         meta(keywords='')
+        meta(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no")
         title My Site
         link(rel='stylesheet', type='text/css', href='../css/b-page/b-page.css')
-        link(rel='stylesheet', type='text/css', href='../css/b-page/media-queries.css')
+        link(rel='stylesheet', type='text/css', href='../css/b-page/player/mediaelementplayer.css')
         link(rel='stylesheet', type='text/css', href='../css/b-header/b-header.css')
         link(rel='stylesheet', type='text/css', href='../css/b-content/b-content.css')
         link(rel='stylesheet', type='text/css', href='../css/b-footer/b-footer.css')
@@ -17,21 +18,20 @@ html
         script(type='text/javascript' src='../js/b-page/js/jquery.dcflickr.1.0.js')
         script(type='text/javascript' src='../js/b-page/js/jquery.fitvids.js')
         script(type='text/javascript' src='../js/b-page/js/jquery.masonry.min.js')
-        script(type='text/javascript' src='../js/b-page/js/mediaelement.min.js')
-        script(type='text/javascript' src='../js/b-page/js/mediaelementplayer.min.js')
-        script(type='text/javascript' src='../js/b-page/js/retina.js')
-        script(type='text/javascript' src='../js/b-page/js/selectnav.js')
+        script(type='text/javascript' src='../js/b-page/js/mediaelement-and-player.min.js')
+        script(type='text/javascript' src='../js/b-page/js/selectnav.min.js')
         script(type='text/javascript' src='../js/b-page/js/twitter.min.js')
         script(type='text/javascript' src='../js/b-page/js/scripts.js')
-        script: $.backstretch("#{componentsPath}/b-page/images/bg/1.jpg");
+        script.
+             $.backstretch("#{componentsPath}/b-page/images/bg/1.jpg");
     body
-        div.b-page
+        div.b-page.single
             div.b-header-wrap
                 div.b-header
                     div.b-logo
                         a(href='main.html'): img(src='#{componentsPath}/b-header/images/logo.png')
                     div#b-menu.b-menu
-                        ul
+                        ul#nav
                             li.active
                                 a(href='#') Blog
                                 ul
@@ -53,17 +53,6 @@ html
                                         a(href='#') Columns
                             li
                                 a(href='#') Contact
-                        select.b-menu__selectnav
-                            option(value='') --- Navigation ---
-                            option(value='#') Blog
-                            option(value='#') Blog Post
-                            option(value='#') Pages
-                            option(value='#') Page With Sidebar
-                            option(value='#') Full Width
-                            option(value='#') Styles
-                            option(value='#') Typography
-                            option(value='#') Columns
-                            option(value='#') Contact
             div.b-content-wrap
                 div.b-intro
                     | Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum, Vestibulum id ligula porta.
@@ -78,7 +67,10 @@ html
 
                 //include page-with-sidebar
                 //include full-width
-                include columns
+                //include columns
+                include typography
+                include post
+                //include blog
 
             div.b-footer-wrap
                 div.b-footer
