@@ -6,86 +6,80 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     sass = require('gulp-sass'),
     uglify = require('gulp-uglify'),
-    refresh = require('gulp-livereload'),
     imagemin = require('gulp-imagemin'),
+    refresh = require('gulp-livereload'),
     lr = require('tiny-lr'),
     server = lr();
 
+
+
 var paths = {
-    jade: './layouts/*.jade',
-    scss: './components/styles.scss',
+    jade   : './layouts/*.jade',
+    styles   : './components/styles.scss',
     scripts: './components/**/*.js',
-    images: ['./components/**/*.png', './components/**/*.jpg'],
-    fonts: ['./components/b-page/fonts/*']
+    images : ['./components/**/*.png', './components/**/*.jpg'],
+    fonts  : ['./components/b-page/fonts/*']
 };
 
-gulp.task('template:jade', function() {
+gulp.task('jade', function () {
     return gulp.src(paths.jade)
         .pipe(jade())
         .pipe(gulp.dest('./assets/html'))
         .pipe(refresh(server));
 });
 
-gulp.task('css:sass', function() {
-    gulp.src(paths.scss)
-        .pipe(sass({ includePaths : ['./components/'] }))
-        .pipe(concat('styles.css'))
+gulp.task('styles', function () {
+    return gulp.src(paths.styles)
+        .pipe(sass({ includePaths: ['./components/'] }))
+//        .pipe(concat('styles.css'))
         .pipe(minifyCss())
         .pipe(gulp.dest('./assets/css'))
-        .pipe(refresh(server));
+        .pipe(refresh(server))
+        .pipe(notify({ message: 'Styles task complete' }));
 });
 
-gulp.task('js:scripts', function() {
+gulp.task('scripts', function () {
     // Minify and copy all JavaScript
     return gulp.src(paths.scripts)
-//        .pipe(concat("scripts.min.js"))
-        .pipe(uglify())
+        .pipe(concat('main.js'))
         .pipe(gulp.dest('./assets/js'))
         .pipe(refresh(server));
 });
 
-gulp.task('images', function() {
-    gulp.src(paths.images)
-        .pipe(imagemin())
+gulp.task('images', function () {
+    return gulp.src(paths.images)
+        .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
         .pipe(gulp.dest('./assets/images'))
-        .pipe(refresh(server));
+        .pipe(refresh(server))
+        .pipe(notify({ message: 'Images task complete' }));
 });
 
-gulp.task('fonts', function() {
-    gulp.src(paths.fonts)
+gulp.task('fonts', function () {
+    return gulp.src(paths.fonts)
         .pipe(gulp.dest('./assets/css/fonts'))
         .pipe(refresh(server));
 });
 
-gulp.task('lr-server', function() {
-    server.listen(35729, function(err) {
-        if(err) return console.log(err);
+gulp.task('lr-server', function () {
+    server.listen(35729, function (err) {
+        if (err) return console.log(err);
     });
 });
 
-gulp.task('default', function() {
-    gulp.run('lr-server', 'template:jade', 'css:sass', 'js:scripts', 'images', 'fonts');
-
-    // add watchers to jade, scss, js, images files
-    gulp.watch(paths.jade, function(){
-        gulp.run('template:jade');
-    });
-
-    gulp.watch(paths.scss, function(){
-        gulp.run('css:sass');
-    });
-
-    gulp.watch(paths.scripts, function(){
-        gulp.run('js:scripts');
-    });
-
-    gulp.watch(paths.images, function(){
-        gulp.run('images');
-    });
-
-    gulp.watch(paths.fonts, function(){
-        gulp.run('fonts');
-    });
-
-
+gulp.task('clean', function() {
+    return gulp.src(['./assets/css', './assets/js', './assets/'], {read: false})
+        .pipe(clean());
 });
+
+// Rerun the task when a file changes
+gulp.task('watch', function () {
+    gulp.watch(paths.jade, ['jade']);
+    gulp.watch(paths.styles, ['styles']);
+    gulp.watch(paths.scripts, ['scripts']);
+    gulp.watch(paths.images, ['images']);
+    gulp.watch(paths.fonts, ['fonts']);
+});
+
+// The default task (called when you run `gulp` from cli)
+gulp.task('default', ['lr-server', 'jade', 'styles', 'scripts', 'images', 'fonts', 'watch']);
+

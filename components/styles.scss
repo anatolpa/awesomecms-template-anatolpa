@@ -1,7 +1,10 @@
-@import "mixin.lib";
+// Common
+@import "common/reset";
+@import "common/mixin.lib";
+@import "common/fonts";
+@import "common/mediaelementplayer";
 
 // Global page styles
-@import "b-page/mediaelementplayer";
 @import "b-page/b-page";
 
 // Blocks styles
