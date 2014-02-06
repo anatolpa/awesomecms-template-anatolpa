@@ -428,6 +428,18 @@
         position: absolute;
         right: 0;
         top: 3px;
+        @include m-query-respond-to(medium-screen){
+          width: 170px;
+          right: 133px;
+          margin-top: -8px;
+        }
+        @include m-query-respond-to(tablet){
+          width: 270px;
+          right: 38px;
+        }
+        @include m-query-respond-to(mobile){
+          width: 240px;
+        }
       }
     }
   }
@@ -478,6 +490,7 @@
 
   /* ---------Blog layout start-------- */
   .b-blog-wrap {
+    @extend %clearfix;
     .b-post {
       h2.b-post__title {
         font-size: 15px;
