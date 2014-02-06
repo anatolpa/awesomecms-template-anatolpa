@@ -17,20 +17,23 @@
     },
     "homepage"       : "https://github.com/anatolpa/awesomecms-template-anatolpa",
     "dependencies"   : {
-        "gulp-rename"    : "*",
-        "gulp-uglify"    : "*",
-        "gulp-clean"     : "*",
-        "gulp-minify-css": "*",
-        "gulp"           : "*",
-        "gulp-jade"      : "*",
-        "gulp-ruby-sass" : "*",
-        "gulp-concat"    : "*",
-        "gulp-imagemin"  : "*",
-        "gulp-livereload": "*",
-        "tiny-lr"        : "*"
+        "gulp-rename"    : "0.2.x",
+        "gulp-uglify"    : "0.2.x",
+        "gulp-clean"     : "0.2.x",
+        "gulp-minify-css": "0.3.x",
+        "gulp"           : "3.5.x",
+        "gulp-jade"      : "0.4.x",
+        "gulp-ruby-sass" : "0.3.x",
+        "gulp-concat"    : "2.1.x",
+        "gulp-imagemin"  : "0.1.x",
+        "gulp-livereload": "1.0.x",
+        "tiny-lr"        : "0.0.x"
 
     },
     "devDependencies": {
 
+    },
+    "engines": {
+        "node": ">=0.10"
     }
 }
