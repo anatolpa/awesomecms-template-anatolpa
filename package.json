@@ -23,14 +23,12 @@
         "gulp-minify-css": "*",
         "gulp"           : "*",
         "gulp-jade"      : "*",
-        "gulp-sass"      : "*",
+        "gulp-ruby-sass" : "*",
         "gulp-concat"    : "*",
         "gulp-imagemin"  : "*",
         "gulp-livereload": "*",
-        "tiny-lr"        : "*",
-        "gulp-cache"     : "*",
-        "gulp-jshint"    : "*",
-        "gulp-notify"    : "*"
+        "tiny-lr"        : "*"
+
     },
     "devDependencies": {
 

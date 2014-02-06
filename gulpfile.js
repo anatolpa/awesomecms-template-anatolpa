@@ -4,10 +4,9 @@ var gulp        = require('gulp'),
     minifyCss   = require('gulp-minify-css'),
     concat      = require('gulp-concat'),
     rename      = require('gulp-rename'),
-    sass        = require('gulp-sass'),
+    sass        = require('gulp-ruby-sass'),
     uglify      = require('gulp-uglify'),
     imagemin    = require('gulp-imagemin'),
-    cache       = require('gulp-cache'),
     refresh     = require('gulp-livereload'),
     lr          = require('tiny-lr'),
     server      = lr();
@@ -17,7 +16,7 @@ var paths = {
     styles : './components/styles.scss',
     scripts: './components/**/*.js',
     images : ['./components/**/*.png', './components/**/*.jpg'],
-    fonts  : ['./components/b-page/fonts/*']
+    fonts  : ['./components/b-page/fonts/**/*']
 };
 
 gulp.task('jade', function () {
@@ -29,7 +28,7 @@ gulp.task('jade', function () {
 
 gulp.task('styles', function () {
     return gulp.src(paths.styles)
-        .pipe(sass({ includePaths: ['./components/'] }))
+        .pipe(sass({ loadPath: ['./components/'] }))
         .pipe(minifyCss())
         .pipe(gulp.dest('./assets/css'))
         .pipe(refresh(server));
@@ -81,5 +80,5 @@ gulp.task('watch', function () {
 
 // Default task
 gulp.task('default', ['clean'], function() {
-    gulp.start('jade', 'styles', 'scripts', 'images', 'fonts','lr-server', 'watch');
+    gulp.start('lr-server', 'jade', 'styles', 'scripts', 'images', 'fonts', 'watch' );
 });
