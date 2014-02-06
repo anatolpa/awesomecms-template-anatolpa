@@ -14,7 +14,7 @@ var gulp        = require('gulp'),
 var paths = {
     jade   : './layouts/*.jade',
     styles : './components/styles.scss',
-    scripts: './components/**/*.js',
+    scripts: './components/b-page/js/*.js',
     images : ['./components/**/*.png', './components/**/*.jpg'],
     fonts  : ['./components/b-page/fonts/**/*']
 };
@@ -37,6 +37,7 @@ gulp.task('styles', function () {
 gulp.task('scripts', function () {
     // Minify and copy all JavaScript
     return gulp.src(paths.scripts)
+//        .pipe(uglify())
 //        .pipe(concat('main.js'))
         .pipe(gulp.dest('./assets/js'))
         .pipe(refresh(server));

@@ -113,8 +113,18 @@ ol li {
   margin: 0;
 }
 iframe {
-  max-width: 100%;
-  height: auto;
+  @include m-query-respond-to(medium-screen){
+    max-width: 100%;
+    height: auto;
+  }
+  @include m-query-respond-to(tablet){
+    max-width: 100%;
+    height: auto;
+  }
+  @include m-query-respond-to(mobile){
+    max-width: 100%;
+    height: auto;
+  }
 }
 .b-page__img_frame_hover {
   display: block;
